@@ -32,6 +32,7 @@ class HomeFragment extends StatelessWidget {
                   await sleepAsync(500.ms);
                 },
                 child: SingleChildScrollView(
+                  physics: const AlwaysScrollableScrollPhysics(),
                     padding: const EdgeInsets.only(top: TossAppBar.appBarHeight, bottom: 50),
                     child: Column(
                       children: [

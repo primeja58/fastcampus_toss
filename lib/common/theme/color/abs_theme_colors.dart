@@ -58,6 +58,14 @@ abstract class AbstractThemeColors {
 
   Color get ImportantText => const Color.fromARGB(255, 255, 255, 255);
 
+  Color get lessImportantArrow => const Color.fromARGB(255, 255, 255, 255);
+
+  Color? get lessImportantPoint => const Color.fromARGB(255, 255, 255, 255);
+
+  Color? get benefitSubText => const Color.fromARGB(255, 255, 255, 255);
+
+  Color? get benefitTitleText => const Color.fromARGB(255, 0, 68, 187);
+
 
 
 }

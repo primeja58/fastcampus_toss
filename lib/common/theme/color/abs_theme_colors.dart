@@ -68,6 +68,8 @@ abstract class AbstractThemeColors {
 
   Color? get stockPoint => const Color.fromARGB(255, 189, 0, 23);
 
+  Color? get StockText => null;
+
 
 
 }

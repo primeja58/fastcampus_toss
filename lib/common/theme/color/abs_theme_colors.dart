@@ -66,6 +66,8 @@ abstract class AbstractThemeColors {
 
   Color? get benefitTitleText => const Color.fromARGB(255, 0, 68, 187);
 
+  Color? get stockPoint => const Color.fromARGB(255, 189, 0, 23);
+
 
 
 }

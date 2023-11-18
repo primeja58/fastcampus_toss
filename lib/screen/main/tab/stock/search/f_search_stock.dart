@@ -38,7 +38,7 @@ class _SearchStockFragmentState extends State<SearchStockFragment> {
       body: SizedBox(
         height: 500,
         child: ListView(
-          children: [
+          children: const [
             SearchHistoryStockList(),
             PopularSearchStockList(),
           ],

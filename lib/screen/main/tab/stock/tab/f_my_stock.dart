@@ -1,6 +1,7 @@
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/widget/w_arrow.dart';
 import 'package:fast_app_base/common/widget/w_rounded_container.dart';
+import 'package:fast_app_base/screen/main/tab/stock/tab/w_interest_stock_list.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../common/widget/w_longbutton.dart';
@@ -11,7 +12,7 @@ class MyStockFragment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [getMyAccount(context), height20, getMyAccount(context)],
+      children: [getMyAccount(context), height20, getMyStock(context)],
     );
   }
 
@@ -24,7 +25,7 @@ class MyStockFragment extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            '계좌'.text.color(context.appColors.lessImportantPoint).make(),
+            '계좌'.text.size(18).color(context.appColors.lessImportantPoint).make(),
             Row(
               children: [
                 '443원'
@@ -62,14 +63,14 @@ class MyStockFragment extends StatelessWidget {
       );
 
   Widget getMyStock(BuildContext context) => Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20,),
         color: context.appColors.roundedLayoutBackground,
         child: Column(
           children: [
             height30,
             Row(
               children: [
-                '관심주식'.text.color(context.appColors.lessImportantPoint).make(),
+                '관심주식'.text.size(18).color(context.appColors.lessImportantPoint).make(),
                 emptyExpended,
                 '편집하기'
                     .text
@@ -84,16 +85,17 @@ class MyStockFragment extends StatelessWidget {
                 context.showSnackbar('기본');
               },
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
+                padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 12,),
                 child: Row(
                   children: [
-                    '기본'.text.make(),
+                    '기본'.text.color(context.appColors.lessImportantPoint).make(),
                     emptyExpended,
-                    Arrow(direction: AxisDirection.up),
+                    const Arrow(direction: AxisDirection.up,color: Colors.white),
                   ],
                 ),
               ),
-            )
+            ),
+            InterestStockList().pSymmetric(h: 20),
           ],
         ),
       );

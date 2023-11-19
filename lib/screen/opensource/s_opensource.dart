@@ -33,6 +33,7 @@ class _OpensourceScreenState extends State<OpensourceScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: context.appColors.roundedLayoutBackground,
       appBar: AppBar(
         title: 'opensource'.tr().text.make(),
       ),

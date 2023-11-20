@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 
 import '../../../notification/s_notification.dart';
 
-
-
-
 class TossAppBar extends StatefulWidget {
   static const double appBarHeight = 60;
+
   const TossAppBar({super.key});
 
   @override
@@ -49,17 +47,22 @@ class _TossAppBarState extends State<TossAppBar> {
                   height: 30,
                 ),
                 // if(_showRedDot)
-                  Positioned.fill(child: Align(
+                Positioned.fill(
+                    child: Align(
                   alignment: Alignment.topRight,
                   child: Container(
                     width: 6,
                     height: 6,
-                    decoration:
-                        const BoxDecoration(shape: BoxShape.circle, color: Colors.red),
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.red),
                   ),
                 ))
               ],
-            ),
+            )
+                .animate(onComplete: (controller)=> controller.repeat())
+                .shake(duration: 5000.ms, hz: 3)
+                .then()
+                .fadeOut(duration: 1000.ms),
           ),
           width10,
         ],

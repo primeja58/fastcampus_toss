@@ -16,7 +16,9 @@ final bankAccounts =[
   bankAccountShinhan2,
   bankAccountShinhan3,
   bankAccountToss1,
+  bankAccountToss2,
   bankAccountKakao1,
+  bankAccountKakao2,
 ];
 
 final bankMap = {
